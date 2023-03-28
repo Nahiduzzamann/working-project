@@ -31,7 +31,7 @@ const Shop = () => {
             }
         }
         setCart(savedCart); 
-        console.log(savedCart);
+        // console.log(savedCart);
 
     }, [products])
 
