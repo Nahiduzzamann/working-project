@@ -4,3 +4,12 @@
     position: sticky;
     top: 0;
 }
+@media screen and (max-width: 576px) {
+    .cart{
+        padding: 10px;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    
+}
