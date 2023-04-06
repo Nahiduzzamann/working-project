@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import './Shop.css'
 import Product from '../Product/Product';
 import Cart from '../Cart/Cart';
-import { deleteShoppingCart,addToDb, getShoppingCart } from '../../asset/utilities/fakedb';
+import { deleteShoppingCart, addToDb, getShoppingCart } from '../../asset/utilities/fakedb';
+import { Link } from 'react-router-dom';
+import { TrashIcon } from '@heroicons/react/24/solid'
 
 const Shop = () => {
     const [products, setProducts] = useState([]);
@@ -34,7 +36,7 @@ const Shop = () => {
                 savedCart.push(addedProduct);
             }
         }
-        setCart(savedCart); 
+        setCart(savedCart);
         // console.log(savedCart);
 
     }, [products])
@@ -55,6 +57,13 @@ const Shop = () => {
                     cart={cart}
                     handleClearCart={handleClearCart}
                 >
+                    <Link to={"orders"} style={{textDecoration:'none',}}>
+                    <button
+                        className='check-out-btn'>
+                        <span>Review Order</span>
+                        
+                    </button>
+                    </Link>
                 </Cart>
             </div>
         </div>

@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import Cart from '../Cart/Cart';
 import ReviewItem from '../ReviewItem/ReviewItem';
 import './Orders.css'
 import { deleteShoppingCart, removeFromDb } from '../../asset/utilities/fakedb';
+import { TrashIcon } from '@heroicons/react/24/solid'
 
 
 const Orders = () => {
@@ -30,10 +31,17 @@ const Orders = () => {
                 }
             </div>
             <div className="cart-container">
-                <Cart 
-                cart={cart}
-                handleClearCart={handleClearCart}
-                ></Cart>
+                <Cart
+                    cart={cart}
+                    handleClearCart={handleClearCart}
+                >
+                    <Link to={"/checkout"} style={{textDecoration:'none',}}>
+                    <button
+                        className='check-out-btn'>
+                        <span>Proceed Checkout</span>
+                    </button>
+                    </Link>
+                </Cart>
             </div>
         </div>
     );
