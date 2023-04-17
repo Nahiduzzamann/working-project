@@ -5,7 +5,6 @@ import { TrashIcon } from '@heroicons/react/24/solid'
 
 const ReviewItem = ({ product, handleRemoveFromCart }) => {
     const { id, img, price, name, quantity } = product;
-
     return (
         <div className='review-item'>
             <div className='item'>
