@@ -17,6 +17,9 @@ nav.header a {
 nav.header a:hover {
     color: #FF9900;
 }
+.text-white{
+    color: white;
+}
 
 @media screen and (max-width: 576px) {
     .header {
